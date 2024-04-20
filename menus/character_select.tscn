@@ -1,0 +1,343 @@
+[gd_scene load_steps=45 format=3 uid="uid://b2ygndyvnordh"]
+
+[ext_resource type="Texture2D" uid="uid://dogd34q8a5twg" path="res://assets/main menu/dad/temp.png" id="1_ayvqn"]
+[ext_resource type="Script" path="res://menus/character_select.gd" id="1_tid05"]
+[ext_resource type="Texture2D" uid="uid://dku227atfmhsx" path="res://assets/main menu/dad/cool.png" id="2_d54u1"]
+[ext_resource type="Texture2D" uid="uid://b1cxuvx8xbess" path="res://assets/dads/asian dad/thumbnail.png" id="2_lf38v"]
+[ext_resource type="Texture2D" uid="uid://443hngi6u4hx" path="res://assets/main menu/dad/coolf.png" id="3_f8usg"]
+[ext_resource type="Texture2D" uid="uid://cjqedd3oijvu4" path="res://assets/main menu/dad/buff.png" id="4_xgjlv"]
+[ext_resource type="Texture2D" uid="uid://c4fcfsoptv7un" path="res://assets/main menu/dad/bufff.png" id="5_rdl44"]
+[ext_resource type="Texture2D" uid="uid://bwjb86emqi0nr" path="res://assets/main menu/play button.png" id="7_xaxmq"]
+
+[sub_resource type="Gradient" id="Gradient_hnkh1"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.011976, 1)
+colors = PackedColorArray(0.818837, 0.334651, 0, 1, 1, 0.368627, 0.0705882, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o7gcn"]
+gradient = SubResource("Gradient_hnkh1")
+width = 1920
+
+[sub_resource type="InputEventAction" id="InputEventAction_xqh4c"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_cv475"]
+events = [SubResource("InputEventAction_xqh4c")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_l1suh"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_nxc34"]
+events = [SubResource("InputEventAction_l1suh")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_r5bhw"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_nupu2"]
+events = [SubResource("InputEventAction_r5bhw")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_xwe6p"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_6k0uo"]
+events = [SubResource("InputEventAction_xwe6p")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_ea1w1"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_o7h66"]
+events = [SubResource("InputEventAction_ea1w1")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_4k30l"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_x3uk6"]
+events = [SubResource("InputEventAction_4k30l")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_65g46"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_5lklc"]
+events = [SubResource("InputEventAction_65g46")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_mho10"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_rjydt"]
+events = [SubResource("InputEventAction_mho10")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_tyi8i"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_w33dt"]
+events = [SubResource("InputEventAction_tyi8i")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_30cp4"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_xaw0y"]
+events = [SubResource("InputEventAction_30cp4")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_7rf0s"]
+
+[sub_resource type="Shortcut" id="Shortcut_wpm2d"]
+events = [SubResource("InputEventAction_7rf0s")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_r8fpm"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_6v3vd"]
+events = [SubResource("InputEventAction_r8fpm")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_81wsy"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_8ihy3"]
+events = [SubResource("InputEventAction_81wsy")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_cydba"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_m2n0s"]
+events = [SubResource("InputEventAction_cydba")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_c0vds"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_mbcje"]
+events = [SubResource("InputEventAction_c0vds")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_fcn64"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_7f2ls"]
+events = [SubResource("InputEventAction_fcn64")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_u38yg"]
+action = &"select"
+
+[sub_resource type="Shortcut" id="Shortcut_0fiem"]
+events = [SubResource("InputEventAction_u38yg")]
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_tid05")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("GradientTexture1D_o7gcn")
+
+[node name="PlayerOneSelection" type="TextureRect" parent="."]
+offset_left = 110.0
+offset_top = 36.0
+offset_right = 618.0
+offset_bottom = 713.0
+texture = ExtResource("2_lf38v")
+
+[node name="PlayerTwoSelection" type="TextureRect" parent="."]
+offset_left = 1263.0
+offset_top = 42.0
+offset_right = 1771.0
+offset_bottom = 719.0
+texture = ExtResource("2_lf38v")
+flip_h = true
+
+[node name="PlayerOneCharacters" type="GridContainer" parent="."]
+offset_left = 105.0
+offset_top = 578.0
+offset_right = 950.0
+offset_bottom = 1174.0
+scale = Vector2(0.78, 0.78)
+columns = 3
+
+[node name="CoolDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../PlayerTwoCharacters/DrunkDadTwo")
+focus_neighbor_top = NodePath("../GamerDad")
+focus_neighbor_right = NodePath("../BuffDad")
+focus_neighbor_bottom = NodePath("../AsianDad")
+shortcut = SubResource("Shortcut_cv475")
+texture_normal = ExtResource("2_d54u1")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="BuffDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../CoolDad")
+focus_neighbor_top = NodePath("../MilkDad")
+focus_neighbor_right = NodePath("../DrunkDad")
+focus_neighbor_bottom = NodePath("../GolfDad")
+shortcut = SubResource("Shortcut_nxc34")
+texture_normal = ExtResource("4_xgjlv")
+texture_focused = ExtResource("5_rdl44")
+
+[node name="DrunkDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../BuffDad")
+focus_neighbor_top = NodePath("../FootballDad")
+focus_neighbor_right = NodePath("../../PlayerTwoCharacters/CoolDadTwo")
+focus_neighbor_bottom = NodePath("../FishDad")
+shortcut = SubResource("Shortcut_nupu2")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="AsianDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../PlayerTwoCharacters/FishDadTwo")
+focus_neighbor_top = NodePath("../CoolDad")
+focus_neighbor_right = NodePath("../GolfDad")
+focus_neighbor_bottom = NodePath("../GamerDad")
+shortcut = SubResource("Shortcut_6k0uo")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="GolfDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../AsianDad")
+focus_neighbor_top = NodePath("../BuffDad")
+focus_neighbor_right = NodePath("../FishDad")
+focus_neighbor_bottom = NodePath("../MilkDad")
+shortcut = SubResource("Shortcut_o7h66")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="FishDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GolfDad")
+focus_neighbor_top = NodePath("../DrunkDad")
+focus_neighbor_right = NodePath("../../PlayerTwoCharacters/AsianDadTwo")
+focus_neighbor_bottom = NodePath("../FootballDad")
+shortcut = SubResource("Shortcut_x3uk6")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="GamerDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../PlayerTwoCharacters/FootballDadTwo")
+focus_neighbor_top = NodePath("../AsianDad")
+focus_neighbor_right = NodePath("../MilkDad")
+focus_neighbor_bottom = NodePath("../CoolDad")
+shortcut = SubResource("Shortcut_5lklc")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="MilkDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GamerDad")
+focus_neighbor_top = NodePath("../GolfDad")
+focus_neighbor_right = NodePath("../FootballDad")
+focus_neighbor_bottom = NodePath("../BuffDad")
+shortcut = SubResource("Shortcut_rjydt")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="FootballDad" type="TextureButton" parent="PlayerOneCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../MilkDad")
+focus_neighbor_top = NodePath("../FishDad")
+focus_neighbor_right = NodePath("../../PlayerTwoCharacters/GamerDadTwo")
+focus_neighbor_bottom = NodePath("../DrunkDad")
+shortcut = SubResource("Shortcut_w33dt")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="PlayerTwoCharacters" type="GridContainer" parent="."]
+offset_left = 1160.0
+offset_top = 578.0
+offset_right = 2005.0
+offset_bottom = 1174.0
+scale = Vector2(0.78, 0.78)
+columns = 3
+
+[node name="CoolDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../PlayerOneCharacters/DrunkDad")
+focus_neighbor_top = NodePath("../GamerDadTwo")
+shortcut = SubResource("Shortcut_xaw0y")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="BuffDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../MilkDadTwo")
+shortcut = SubResource("Shortcut_wpm2d")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="DrunkDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../FootballDadTwo")
+focus_neighbor_right = NodePath("../../PlayerOneCharacters/CoolDad")
+shortcut = SubResource("Shortcut_6v3vd")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="AsianDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../PlayerOneCharacters/FishDad")
+shortcut = SubResource("Shortcut_8ihy3")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="GolfDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="FishDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../../PlayerOneCharacters/AsianDad")
+shortcut = SubResource("Shortcut_m2n0s")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="GamerDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../PlayerOneCharacters/FootballDad")
+focus_neighbor_bottom = NodePath("../CoolDadTwo")
+shortcut = SubResource("Shortcut_mbcje")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="MilkDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../BuffDadTwo")
+shortcut = SubResource("Shortcut_7f2ls")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="FootballDadTwo" type="TextureButton" parent="PlayerTwoCharacters"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../../PlayerOneCharacters/GamerDad")
+focus_neighbor_bottom = NodePath("../DrunkDadTwo")
+shortcut = SubResource("Shortcut_0fiem")
+texture_normal = ExtResource("1_ayvqn")
+texture_focused = ExtResource("3_f8usg")
+
+[node name="Play" type="TextureButton" parent="."]
+offset_left = 733.0
+offset_top = 80.0
+offset_right = 1182.0
+offset_bottom = 264.0
+texture_normal = ExtResource("7_xaxmq")
+ignore_texture_size = true
+stretch_mode = 3
+
+[connection signal="pressed" from="PlayerOneCharacters/CoolDad" to="." method="_on_cool_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/BuffDad" to="." method="_on_buff_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/DrunkDad" to="." method="_on_drunk_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/AsianDad" to="." method="_on_asian_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/GolfDad" to="." method="_on_golf_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/FishDad" to="." method="_on_fish_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/GamerDad" to="." method="_on_gamer_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/MilkDad" to="." method="_on_milk_dad_pressed"]
+[connection signal="pressed" from="PlayerOneCharacters/FootballDad" to="." method="_on_football_dad_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/CoolDadTwo" to="." method="_on_cool_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/BuffDadTwo" to="." method="_on_buff_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/DrunkDadTwo" to="." method="_on_drunk_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/AsianDadTwo" to="." method="_on_asian_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/GolfDadTwo" to="." method="_on_golf_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/FishDadTwo" to="." method="_on_fish_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/GamerDadTwo" to="." method="_on_gamer_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/MilkDadTwo" to="." method="_on_milk_dad_two_pressed"]
+[connection signal="pressed" from="PlayerTwoCharacters/FootballDadTwo" to="." method="_on_football_dad_two_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

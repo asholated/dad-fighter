@@ -1,0 +1,2 @@
+SPE: drive golf cart
+STR: launch golf ball
