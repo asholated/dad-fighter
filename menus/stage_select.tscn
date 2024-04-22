@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=3 uid="uid://6up3lgug7cl3"]
+
+[ext_resource type="Script" path="res://menus/stage_select.gd" id="1_bkarh"]
+[ext_resource type="Texture2D" uid="uid://d3jok1g0s5nc1" path="res://assets/dads/asian dad/thumbnail.png" id="2_sr5ei"]
+[ext_resource type="Texture2D" uid="uid://bwjb86emqi0nr" path="res://assets/main menu/play button.png" id="3_a67ny"]
+[ext_resource type="Texture2D" uid="uid://364m7vgsuuli" path="res://assets/stages/buttons/office.png" id="3_x0crd"]
+[ext_resource type="Texture2D" uid="uid://binq84r0hmetq" path="res://assets/stages/buttons/officef.png" id="4_115qg"]
+[ext_resource type="Texture2D" uid="uid://drhod7brb2uyq" path="res://assets/stages/buttons/lot.png" id="5_24q1u"]
+[ext_resource type="Texture2D" uid="uid://sax74yntqux0" path="res://assets/stages/buttons/lotf.png" id="6_p1tl0"]
+[ext_resource type="Texture2D" uid="uid://s0ulhluahb2t" path="res://assets/stages/buttons/stadium.png" id="7_s83c6"]
+[ext_resource type="Texture2D" uid="uid://xmy3lvfhuots" path="res://assets/stages/buttons/stadiumf.png" id="8_sp24l"]
+[ext_resource type="Texture2D" uid="uid://ducxnw7ow4yjo" path="res://assets/stages/buttons/train.png" id="9_h48ls"]
+[ext_resource type="Texture2D" uid="uid://7rtti5caykrm" path="res://assets/stages/buttons/trainf.png" id="10_jkqoq"]
+[ext_resource type="Texture2D" uid="uid://bpt235qxtc2kq" path="res://assets/stages/buttons/warehouse.png" id="11_0eivq"]
+[ext_resource type="Texture2D" uid="uid://dat524g1gjp8c" path="res://assets/stages/buttons/warehousef.png" id="12_chjxm"]
+[ext_resource type="Texture2D" uid="uid://cbjdqdxjd1q5" path="res://assets/main menu/playf.png" id="14_g73p3"]
+
+[sub_resource type="Gradient" id="Gradient_hnkh1"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.011976, 1)
+colors = PackedColorArray(0.818837, 0.334651, 0, 1, 1, 0.368627, 0.0705882, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6yqle"]
+gradient = SubResource("Gradient_hnkh1")
+width = 1920
+
+[node name="StageSelect" type="Node2D"]
+script = ExtResource("1_bkarh")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("GradientTexture1D_6yqle")
+
+[node name="PlayerOneSelection" type="TextureRect" parent="."]
+offset_left = 121.0
+offset_top = 49.0
+offset_right = 741.0
+offset_bottom = 875.0
+texture = ExtResource("2_sr5ei")
+
+[node name="PlayerTwoSelection" type="TextureRect" parent="."]
+offset_left = 1179.0
+offset_top = 55.0
+offset_right = 1799.0
+offset_bottom = 881.0
+texture = ExtResource("2_sr5ei")
+flip_h = true
+
+[node name="Stages" type="GridContainer" parent="."]
+offset_left = 261.0
+offset_top = 838.0
+offset_right = 1672.0
+offset_bottom = 1034.0
+columns = 5
+
+[node name="Office" type="TextureButton" parent="Stages"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Warehouse")
+focus_neighbor_top = NodePath("../../Play")
+focus_neighbor_right = NodePath("../Lot")
+texture_normal = ExtResource("3_x0crd")
+texture_focused = ExtResource("4_115qg")
+
+[node name="Lot" type="TextureButton" parent="Stages"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Play")
+texture_normal = ExtResource("5_24q1u")
+texture_focused = ExtResource("6_p1tl0")
+
+[node name="Stadium" type="TextureButton" parent="Stages"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Play")
+texture_normal = ExtResource("7_s83c6")
+texture_focused = ExtResource("8_sp24l")
+
+[node name="Train" type="TextureButton" parent="Stages"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Play")
+texture_normal = ExtResource("9_h48ls")
+texture_focused = ExtResource("10_jkqoq")
+
+[node name="Warehouse" type="TextureButton" parent="Stages"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../Play")
+focus_neighbor_right = NodePath("../Office")
+texture_normal = ExtResource("11_0eivq")
+texture_focused = ExtResource("12_chjxm")
+
+[node name="Play" type="TextureButton" parent="."]
+offset_left = 740.0
+offset_top = 51.0
+offset_right = 1183.0
+offset_bottom = 236.0
+focus_neighbor_bottom = NodePath("../Stages/Office")
+texture_normal = ExtResource("3_a67ny")
+texture_focused = ExtResource("14_g73p3")
+ignore_texture_size = true
+stretch_mode = 3
+
+[connection signal="pressed" from="Stages/Office" to="." method="_on_office_pressed"]
+[connection signal="pressed" from="Stages/Lot" to="." method="_on_lot_pressed"]
+[connection signal="pressed" from="Stages/Stadium" to="." method="_on_stadium_pressed"]
+[connection signal="pressed" from="Stages/Train" to="." method="_on_train_pressed"]
+[connection signal="pressed" from="Stages/Warehouse" to="." method="_on_warehouse_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

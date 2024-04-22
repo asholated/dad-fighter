@@ -1,3 +1,5 @@
-[gd_scene format=3 uid="uid://fn7rexdluaje"]
+[gd_scene load_steps=2 format=3 uid="uid://digyh6bdxy3ig"]
 
-[node name="Football" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://brl3cg6o07av0" path="res://game/dads/dad.tscn" id="1_174bq"]
+
+[node name="Dad" instance=ExtResource("1_174bq")]

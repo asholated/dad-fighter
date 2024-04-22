@@ -1,3 +1,5 @@
-[gd_scene format=3 uid="uid://bfpdy0pev1nig"]
+[gd_scene load_steps=2 format=3 uid="uid://ddgym3ukjusoy"]
 
-[node name="Fishing" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://brl3cg6o07av0" path="res://game/dads/dad.tscn" id="1_ky0hn"]
+
+[node name="Dad" instance=ExtResource("1_ky0hn")]

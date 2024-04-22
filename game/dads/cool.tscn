@@ -1,3 +1,5 @@
-[gd_scene format=3 uid="uid://cx4p31qrwchcj"]
+[gd_scene load_steps=2 format=3 uid="uid://t6n72oeqg3xh"]
 
-[node name="Cool" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://brl3cg6o07av0" path="res://game/dads/dad.tscn" id="1_2bg6o"]
+
+[node name="Dad" instance=ExtResource("1_2bg6o")]
