@@ -9,6 +9,7 @@ var playerTwo;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Back.grab_focus();
 	playerOne = PlayerOneInstance.instantiate();
 	playerTwo = PlayerTwoInstance.instantiate();
 	add_child(playerOne);
@@ -17,7 +18,7 @@ func _ready():
 	playerOne.global_position = Vector2(600,600);
 	playerTwo.global_position = Vector2(1300,600);
 	$Background.texture = GameInfo.stage;
-	game.winner.connect(setDads);
+	setDads(GameInfo.winner);
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -27,6 +28,10 @@ func setDads(dad):
 	if dad == 1:
 		playerOne.anims.play("victory");
 		playerTwo.anims.play("loss");
-	else:
+	elif dad == 2:
 		playerOne.anims.play("loss");
 		playerTwo.anims.play("victory");
+
+
+func _on_back_pressed():
+	get_tree().change_scene_to_file("res://menus/main_menu.tscn");

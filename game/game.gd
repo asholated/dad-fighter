@@ -1,7 +1,6 @@
 extends Node2D
 
 signal turnChange;
-signal winner;
 
 @onready var PlayerOneInstance = Players.playerOneCharacter;
 @onready var PlayerTwoInstance = Players.playerTwoCharacter;
@@ -35,13 +34,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if p1hp.value <= 0: 
-		reset();
-		winner.emit(1);
+	if p2hp.value <= 0: 
+		GameInfo.winner = 1;
 		get_tree().change_scene_to_file("res://menus/win.tscn");
-	if p2hp.value <= 0:
-		reset();
-		winner.emit(2);
+	if p1hp.value <= 0:
+		GameInfo.winner = 2;
 		get_tree().change_scene_to_file("res://menus/win.tscn");
 
 

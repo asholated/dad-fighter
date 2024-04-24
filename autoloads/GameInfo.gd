@@ -11,3 +11,5 @@ var playerTwoFood = 3;
 var playerTwoDrinks = 3;
 var playerTwoMeds = 3;
 var playerTwoStrength = 0;
+
+var winner = 0;

@@ -6,6 +6,8 @@ extends Node2D
 func _ready():
 	$Background.texture = GameInfo.stage;
 	firstButton.grab_focus();
+	$PlayerOneSelection.texture = Players.p1thumbnail;
+	$PlayerTwoSelection.texture = Players.p2thumbnail;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

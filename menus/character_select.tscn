@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://cjqedd3oijvu4" path="res://assets/main menu/dad/buff.png" id="4_xgjlv"]
 [ext_resource type="Texture2D" uid="uid://c4fcfsoptv7un" path="res://assets/main menu/dad/bufff.png" id="5_rdl44"]
 [ext_resource type="Texture2D" uid="uid://bwjb86emqi0nr" path="res://assets/main menu/play button.png" id="7_xaxmq"]
-[ext_resource type="Texture2D" uid="uid://dcif0b8fqajxj" path="res://assets/main menu/dad/asian.png" id="8_j4ocq"]
-[ext_resource type="Texture2D" uid="uid://cm25x53qx13f1" path="res://assets/main menu/dad/asianf.png" id="9_4msnm"]
-[ext_resource type="Texture2D" uid="uid://b4f5vae7l1da1" path="res://assets/main menu/dad/golf.png" id="9_h16q3"]
-[ext_resource type="Texture2D" uid="uid://dqjggoufwowho" path="res://assets/main menu/dad/golff.png" id="10_3k41s"]
-[ext_resource type="Texture2D" uid="uid://cbjdqdxjd1q5" path="res://assets/main menu/playf.png" id="12_f7hfn"]
+[ext_resource type="Texture2D" uid="uid://b4cj7vcdurskj" path="res://assets/main menu/dad/asian.png" id="8_j4ocq"]
+[ext_resource type="Texture2D" uid="uid://cq8bbjr47ysri" path="res://assets/main menu/dad/asianf.png" id="9_4msnm"]
+[ext_resource type="Texture2D" uid="uid://g7jd4yjbnk7m" path="res://assets/main menu/dad/golf.png" id="9_h16q3"]
+[ext_resource type="Texture2D" uid="uid://dwg04bcf48otu" path="res://assets/main menu/dad/golff.png" id="10_3k41s"]
+[ext_resource type="Texture2D" uid="uid://cs0x6p7m026a6" path="res://assets/main menu/playf.png" id="12_f7hfn"]
 
 [sub_resource type="Gradient" id="Gradient_rv7lv"]
 interpolation_mode = 1
