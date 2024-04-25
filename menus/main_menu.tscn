@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsj67r35vnoty"]
+[gd_scene load_steps=11 format=3 uid="uid://dsj67r35vnoty"]
 
 [ext_resource type="Script" path="res://menus/main_menu.gd" id="1_3ynee"]
 [ext_resource type="Texture2D" uid="uid://bfxo8o26j1mtx" path="res://assets/main menu/main menu background.png" id="1_odp3f"]
 [ext_resource type="Texture2D" uid="uid://drnkoolow52xi" path="res://assets/main menu/logo.png" id="2_h4d3o"]
 [ext_resource type="Texture2D" uid="uid://bwjb86emqi0nr" path="res://assets/main menu/play button.png" id="3_ad0y4"]
-[ext_resource type="Texture2D" uid="uid://cbjdqdxjd1q5" path="res://assets/main menu/playf.png" id="5_1bblk"]
+[ext_resource type="Texture2D" uid="uid://c5tnynjbgk0fw" path="res://assets/main menu/playf.png" id="5_1bblk"]
+[ext_resource type="Texture2D" uid="uid://bkkmsk6wokdxo" path="res://assets/main menu/x.png" id="6_7rcb6"]
+[ext_resource type="Texture2D" uid="uid://ds3p2ahdm6vhy" path="res://assets/main menu/xf.png" id="7_tft5c"]
+[ext_resource type="Texture2D" uid="uid://b3kif6gkwshnk" path="res://assets/main menu/options.png" id="8_shwh6"]
+[ext_resource type="Texture2D" uid="uid://d21fn7w6f06mp" path="res://assets/main menu/optionsf.png" id="9_ft2n4"]
+[ext_resource type="PackedScene" uid="uid://salov7a7k07n" path="res://menus/Options.tscn" id="10_w0jha"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_3ynee")
@@ -26,9 +31,47 @@ offset_left = 765.0
 offset_top = 743.0
 offset_right = 1188.0
 offset_bottom = 914.0
+focus_neighbor_left = NodePath("../Quit")
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_right = NodePath("../Options")
 texture_normal = ExtResource("3_ad0y4")
 texture_focused = ExtResource("5_1bblk")
 ignore_texture_size = true
 stretch_mode = 3
 
-[connection signal="pressed" from="Play" to="." method="_on_texture_button_pressed"]
+[node name="Quit" type="TextureButton" parent="."]
+offset_left = 31.0
+offset_top = 32.0
+offset_right = 207.0
+offset_bottom = 209.0
+scale = Vector2(0.545, 0.545)
+focus_neighbor_left = NodePath("../Options")
+focus_neighbor_right = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Play")
+texture_normal = ExtResource("6_7rcb6")
+texture_focused = ExtResource("7_tft5c")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Options" type="TextureButton" parent="."]
+offset_left = 1790.34
+offset_top = 32.0
+offset_right = 1966.34
+offset_bottom = 209.0
+scale = Vector2(0.545, 0.545)
+focus_neighbor_left = NodePath("../Quit")
+focus_neighbor_right = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Play")
+texture_normal = ExtResource("8_shwh6")
+texture_focused = ExtResource("9_ft2n4")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="OptionsMenu" parent="." instance=ExtResource("10_w0jha")]
+visible = false
+position = Vector2(0, -3)
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="visibility_changed" from="OptionsMenu" to="." method="_on_options_menu_visibility_changed"]

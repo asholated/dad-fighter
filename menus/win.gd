@@ -48,3 +48,7 @@ func resetGame():
 	GameInfo.playerTwoStrength = 0;
 
 	GameInfo.winner = 0;
+
+
+func _on_win_music_finished():
+	$WinMusic.play();

@@ -1,7 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://c0qhubd7r008c"]
+[gd_scene load_steps=23 format=3 uid="uid://c0qhubd7r008c"]
 
 [ext_resource type="Script" path="res://game/dads/dad.gd" id="1_p56dy"]
 [ext_resource type="Texture2D" uid="uid://c5t0wu1mtl7of" path="res://assets/dads/golf dad/golf-ball-transparent-free-png.webp" id="3_6p75t"]
+[ext_resource type="AudioStream" uid="uid://67ukwhreekk4" path="res://assets/sound/dads/golf/golf.mp3" id="3_6vlgm"]
+[ext_resource type="AudioStream" uid="uid://b5xmi5bdv21rw" path="res://assets/sound/hit.mp3" id="3_peefr"]
+[ext_resource type="AudioStream" uid="uid://b5sahxmpwmhls" path="res://assets/sound/eat.mp3" id="4_ivhoi"]
+[ext_resource type="AudioStream" uid="uid://bc5ti32n30380" path="res://assets/sound/drink.mp3" id="5_sqpeu"]
+[ext_resource type="AudioStream" uid="uid://kw875ceelkjy" path="res://assets/sound/train.mp3" id="6_bg50u"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x7jaa"]
 load_path = "res://.godot/imported/sprites.png-fe2023f6342fa996ca7b91a89c8a177c.ctex"
@@ -415,5 +420,31 @@ root_node = NodePath("../Dad")
 libraries = {
 "": SubResource("AnimationLibrary_gtcvd")
 }
+
+[node name="Special" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6vlgm")
+volume_db = 5.0
+
+[node name="Strong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6vlgm")
+volume_db = 5.0
+
+[node name="Generic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_peefr")
+volume_db = -5.0
+
+[node name="Eat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ivhoi")
+volume_db = 3.0
+
+[node name="Drink" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sqpeu")
+
+[node name="Medicine" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_sqpeu")
+
+[node name="Train" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_bg50u")
+volume_db = 5.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -24,6 +24,7 @@ var turnBuffer = false;
 func _ready():
 	$Background.set_texture(GameInfo.stage);
 	$Buttons/Main/Fight.grab_focus();
+	MenuMusic.stop();
 	
 	playerOne = PlayerOneInstance.instantiate();
 	playerTwo = PlayerTwoInstance.instantiate();
@@ -72,16 +73,22 @@ func _on_punch_pressed():
 	turnBuffer = true;
 	if turn % 2 != 0:
 		playerOne.anims.play("punch");
+		
 		await(get_tree().create_timer(1).timeout);
+		playerOne.generic.play();
 		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
+		
 		p2hp.value -= 10 + p1Strength;
 		p1en.value += 10;
 	else:
 		playerTwo.anims.play("punch");
+		
 		await(get_tree().create_timer(1).timeout);
+		playerTwo.generic.play();
 		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
+		
 		p1hp.value -= 10 + p2Strength;
 		p2en.value += 10;
 	
@@ -95,16 +102,22 @@ func _on_kick_pressed():
 	turnBuffer = true;
 	if turn % 2 != 0:
 		playerOne.anims.play("kick");
+		
 		await(get_tree().create_timer(1).timeout);
+		playerOne.generic.play();
 		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
+		
 		p2hp.value -= 10 + p1Strength;
 		p1en.value += 10;
 	else:
 		playerTwo.anims.play("kick");
+		
 		await(get_tree().create_timer(1).timeout);
+		playerTwo.generic.play();
 		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
+		
 		p1hp.value -= 10 + p2Strength;
 		p2en.value += 10;
 	
@@ -119,18 +132,26 @@ func _on_strong_pressed():
 	if turn % 2 != 0:
 		if p1en.value < 30: turnBuffer = false; return;
 		p1en.value -= 30;
+		
 		playerOne.anims.play("strong");
+		playerOne.strong.play();
 		await(get_tree().create_timer(1).timeout);
+		
 		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
+		
 		p2hp.value -= 25 + p1Strength;
 	else:
 		if p2en.value < 30: turnBuffer = false; return;
 		p2en.value -= 30;
+		
 		playerTwo.anims.play("strong");
+		playerTwo.strong.play();
 		await(get_tree().create_timer(1).timeout);
+		
 		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
+		
 		p1hp.value -= 25 + p2Strength;
 	
 	turn += 1;
@@ -144,18 +165,26 @@ func _on_special_pressed():
 	if turn % 2 != 0:
 		if p1en.value < 65: turnBuffer = false; return;
 		p1en.value -= 65;
+		
 		playerOne.anims.play("special");
+		playerOne.special.play();
 		await(get_tree().create_timer(1).timeout);
+		
 		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
+		
 		p2hp.value -= 40 + p1Strength;
 	else:
 		if p2en.value < 65: turnBuffer = false; return;
 		p2en.value -= 65;
+		
 		playerTwo.anims.play("special");
+		playerTwo.special.play();
 		await(get_tree().create_timer(1).timeout);
+		
 		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
+		
 		p1hp.value -= 40 + p2Strength;
 	
 	turn += 1;
@@ -170,14 +199,15 @@ func _on_eat_pressed():
 		if GameInfo.playerOneFood == 0: turnBuffer = false; return;
 		updateFood(1);
 		playerOne.anims.play("eat");
+		playerOne.eat.play();
 		await(playerOne.anims.animation_finished);
 		p1en.value += 45;
 		p1hp.value += 20;
-
 	else:
 		if GameInfo.playerTwoFood == 0: turnBuffer = false; return;
 		updateFood(2);
 		playerTwo.anims.play("eat");
+		playerTwo.eat.play();
 		await(playerTwo.anims.animation_finished);
 		p2en.value += 45;
 		p2hp.value += 20;
@@ -193,12 +223,14 @@ func _on_drink_pressed():
 	if turn % 2 != 0:
 		if GameInfo.playerOneDrinks == 0: turnBuffer = false; return;
 		playerOne.anims.play("drink");
+		playerOne.drink.play();
 		updateDrinks(1);
 		await(playerOne.anims.animation_finished);
 		p1en.value += 35;
 	else:
 		if GameInfo.playerTwoDrinks == 0: turnBuffer = false; return;
 		playerTwo.anims.play("drink");
+		playerTwo.drink.play();
 		updateDrinks(2);
 		await(playerTwo.anims.animation_finished);
 		p2en.value += 35;
@@ -214,11 +246,13 @@ func _on_train_pressed():
 	if turn % 2 != 0:
 		updateStrength(1);
 		playerOne.anims.play("train");
+		playerOne.train.play();
 		await(playerOne.anims.animation_finished);
 		p1Strength += 5;
 	else:
 		updateStrength(2);
 		playerTwo.anims.play("train");
+		playerTwo.train.play();
 		await(playerTwo.anims.animation_finished);
 		p2Strength += 5;
 	
@@ -234,12 +268,14 @@ func _on_medicine_pressed():
 		if GameInfo.playerOneMeds == 0:turnBuffer = false; return;
 		updateMeds(1);
 		playerOne.anims.play("medicine");
+		playerOne.medicine.play();
 		await(playerOne.anims.animation_finished);
 		p1hp.value += 35;
 	else:
 		if GameInfo.playerTwoMeds == 0: turnBuffer = false; return;
 		updateMeds(2);
 		playerTwo.anims.play("medicine");
+		playerTwo.medicine.play();
 		await(playerTwo.anims.animation_finished);
 		p2hp.value += 35;
 	

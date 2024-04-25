@@ -4,6 +4,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	firstButton.grab_focus();
+	$PlayerOneSelection.texture = Players.p1thumbnail;
+	$PlayerTwoSelection.texture = Players.p2thumbnail;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -11,6 +13,10 @@ func _process(delta):
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://menus/stage_select.tscn");
+	
+func _input(event):
+	if event.is_action_pressed("ui_cancel") and not event.is_echo():
+		get_tree().change_scene_to_file("res://menus/main_menu.tscn");
 
 
 func _on_cool_dad_pressed():

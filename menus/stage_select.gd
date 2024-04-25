@@ -17,6 +17,11 @@ func _process(delta):
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://game/game.tscn");
+	
+	
+func _input(event):
+	if event.is_action_pressed("ui_cancel") and not event.is_echo():
+		get_tree().change_scene_to_file("res://menus/character_select.tscn");
 
 
 func _on_office_pressed():
