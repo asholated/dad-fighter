@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var game = preload("res://game/game.tscn");
 @onready var PlayerOneInstance = Players.playerOneCharacter;
 @onready var PlayerTwoInstance = Players.playerTwoCharacter;
 
@@ -34,4 +33,18 @@ func setDads(dad):
 
 
 func _on_back_pressed():
+	resetGame();
 	get_tree().change_scene_to_file("res://menus/main_menu.tscn");
+	
+func resetGame():
+	GameInfo.playerOneFood = 3;
+	GameInfo.playerOneDrinks = 3;
+	GameInfo.playerOneMeds = 3;
+	GameInfo.playerOneStrength = 0;
+
+	GameInfo.playerTwoFood = 3;
+	GameInfo.playerTwoDrinks = 3;
+	GameInfo.playerTwoMeds = 3;
+	GameInfo.playerTwoStrength = 0;
+
+	GameInfo.winner = 0;

@@ -10,6 +10,8 @@ signal turnChange;
 @onready var p1en = $PlayerOneGui/Energy;
 @onready var p2en = $PlayerTwoGui/Energy;
 
+@onready var medTexture = $PlayerOneGui/Meds/TextureRect;
+
 var turn = 1;
 var playerOne;
 var playerTwo;
@@ -70,11 +72,15 @@ func _on_punch_pressed():
 	turnBuffer = true;
 	if turn % 2 != 0:
 		playerOne.anims.play("punch");
+		await(get_tree().create_timer(1).timeout);
+		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
 		p2hp.value -= 10 + p1Strength;
 		p1en.value += 10;
 	else:
 		playerTwo.anims.play("punch");
+		await(get_tree().create_timer(1).timeout);
+		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
 		p1hp.value -= 10 + p2Strength;
 		p2en.value += 10;
@@ -89,11 +95,15 @@ func _on_kick_pressed():
 	turnBuffer = true;
 	if turn % 2 != 0:
 		playerOne.anims.play("kick");
+		await(get_tree().create_timer(1).timeout);
+		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
 		p2hp.value -= 10 + p1Strength;
 		p1en.value += 10;
 	else:
 		playerTwo.anims.play("kick");
+		await(get_tree().create_timer(1).timeout);
+		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
 		p1hp.value -= 10 + p2Strength;
 		p2en.value += 10;
@@ -110,12 +120,16 @@ func _on_strong_pressed():
 		if p1en.value < 30: turnBuffer = false; return;
 		p1en.value -= 30;
 		playerOne.anims.play("strong");
+		await(get_tree().create_timer(1).timeout);
+		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
 		p2hp.value -= 25 + p1Strength;
 	else:
 		if p2en.value < 30: turnBuffer = false; return;
 		p2en.value -= 30;
 		playerTwo.anims.play("strong");
+		await(get_tree().create_timer(1).timeout);
+		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
 		p1hp.value -= 25 + p2Strength;
 	
@@ -131,12 +145,16 @@ func _on_special_pressed():
 		if p1en.value < 65: turnBuffer = false; return;
 		p1en.value -= 65;
 		playerOne.anims.play("special");
+		await(get_tree().create_timer(1).timeout);
+		playerTwo.anims.play("hit");
 		await(playerOne.anims.animation_finished);
 		p2hp.value -= 40 + p1Strength;
 	else:
 		if p2en.value < 65: turnBuffer = false; return;
 		p2en.value -= 65;
 		playerTwo.anims.play("special");
+		await(get_tree().create_timer(1).timeout);
+		playerOne.anims.play("hit");
 		await(playerTwo.anims.animation_finished);
 		p1hp.value -= 40 + p2Strength;
 	
@@ -256,7 +274,7 @@ func updateMeds(player):
 	
 func updateStrength(player):
 	var icon = TextureRect.new();
-	var image = load("res://assets/weight.png");
+	var image = load("res://assets/game/weight.png");
 	icon.texture = image;
 	if player == 1:
 		$PlayerOneGui/Strength.add_child(icon);
@@ -266,15 +284,13 @@ func updateStrength(player):
 
 func _on_turn_change():
 	if turn % 2 != 0:
-		$TurnCounter.texture = load("res://assets/playeroneturn.png");
+		$TurnCounter.texture = load("res://assets/game/playeroneturn.png");
 		$TurnCounter.global_position = Vector2(17,992);
 	else:
-		$TurnCounter.texture = load("res://assets/playertwoturn.png");
+		$TurnCounter.texture = load("res://assets/game/playertwoturn.png");
 		$TurnCounter.global_position = Vector2(1282,992);
 	$Buttons/Fight.hide();
 	$Buttons/Action.hide();
 	$Buttons/Main.show();
 	$Buttons/Main/Fight.grab_focus();
 	
-func reset():
-	pass

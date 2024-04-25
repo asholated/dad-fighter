@@ -1,41 +1,41 @@
 [gd_scene load_steps=39 format=3 uid="uid://x2e4hlc8yvqp"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_ynoi2"]
-[ext_resource type="Texture2D" uid="uid://be3v7jryqxxdr" path="res://assets/dads/icons/cool.png" id="2_kjnlv"]
-[ext_resource type="Texture2D" uid="uid://d0af2x84q7tns" path="res://assets/under1.png" id="2_ukknw"]
-[ext_resource type="Texture2D" uid="uid://wbcpftbirmy6" path="res://assets/bar1.png" id="3_lxfvb"]
+[ext_resource type="Texture2D" uid="uid://y8tugc4pvcxw" path="res://assets/game/under1.png" id="2_0tpo6"]
+[ext_resource type="Texture2D" uid="uid://2ohskv1cm3bh" path="res://assets/dads/icons/cool.png" id="2_kjnlv"]
+[ext_resource type="Texture2D" uid="uid://cws7gkpkcr4k0" path="res://assets/game/bar1.png" id="3_q8o6f"]
 [ext_resource type="Script" path="res://game/Icon1.gd" id="3_v0kou"]
-[ext_resource type="Texture2D" uid="uid://bdhbws8nsps3u" path="res://assets/health progress1.png" id="4_47c3d"]
+[ext_resource type="Texture2D" uid="uid://b2kv3b8s50p4t" path="res://assets/game/health progress1.png" id="4_eqtwa"]
 [ext_resource type="Script" path="res://game/Icon2.gd" id="4_gfuw7"]
-[ext_resource type="Texture2D" uid="uid://b6m8jdasj6fom" path="res://assets/food.png" id="4_woojb"]
-[ext_resource type="Texture2D" uid="uid://dm7yex8m67tum" path="res://assets/energy progress1.png" id="5_kh1lw"]
-[ext_resource type="Texture2D" uid="uid://cvt4ww5tx7lx0" path="res://assets/game buttons/fight.png" id="5_l3l0w"]
-[ext_resource type="Texture2D" uid="uid://bud2gojmes06m" path="res://assets/drink.png" id="5_udloc"]
-[ext_resource type="Texture2D" uid="uid://b26mw77xedl50" path="res://assets/game buttons/action.png" id="6_54us3"]
-[ext_resource type="Texture2D" uid="uid://b3o6qa7losuit" path="res://assets/game buttons/fightf.png" id="6_lbfup"]
-[ext_resource type="Texture2D" uid="uid://db7uw22uvj7nd" path="res://assets/medicine.png" id="6_qbxh5"]
-[ext_resource type="Texture2D" uid="uid://8xvaebu6pudi" path="res://assets/game buttons/actionf.png" id="8_u5ahn"]
-[ext_resource type="Texture2D" uid="uid://iqxtajsl4lsl" path="res://assets/game buttons/punch.png" id="9_wrks4"]
-[ext_resource type="Texture2D" uid="uid://xrochei3wplf" path="res://assets/game buttons/punchf.png" id="10_fowbn"]
-[ext_resource type="Texture2D" uid="uid://d0rmfr1wvcgp1" path="res://assets/under2.png" id="10_hwk7m"]
-[ext_resource type="Texture2D" uid="uid://dx0ypbboa0ofb" path="res://assets/game buttons/kick.png" id="11_hts3o"]
-[ext_resource type="Texture2D" uid="uid://csf1j2v58bpnb" path="res://assets/bar2.png" id="11_pwuck"]
-[ext_resource type="Texture2D" uid="uid://bjn56vxjambo1" path="res://assets/game buttons/kickf.png" id="12_2u8t6"]
-[ext_resource type="Texture2D" uid="uid://7066jnb8mv2i" path="res://assets/health progress2.png" id="12_fwtsy"]
-[ext_resource type="Texture2D" uid="uid://ccuds5xuuqyw8" path="res://assets/game buttons/str.png" id="13_c8quq"]
-[ext_resource type="Texture2D" uid="uid://65n82bvtvfrq" path="res://assets/energy progress2.png" id="14_366s4"]
-[ext_resource type="Texture2D" uid="uid://yjeh1bjgodwk" path="res://assets/game buttons/strf.png" id="14_p2rt7"]
-[ext_resource type="Texture2D" uid="uid://b10erbnwepqje" path="res://assets/game buttons/spe.png" id="15_ku124"]
-[ext_resource type="Texture2D" uid="uid://crhhna5uxff6y" path="res://assets/game buttons/spef.png" id="16_4qtfr"]
-[ext_resource type="Texture2D" uid="uid://dcamcnijae8gb" path="res://assets/game buttons/eat.png" id="17_vl0do"]
-[ext_resource type="Texture2D" uid="uid://cjq7y05wxdje5" path="res://assets/game buttons/eatf.png" id="18_yrmkn"]
-[ext_resource type="Texture2D" uid="uid://ca645xjpvv42a" path="res://assets/game buttons/drink.png" id="19_evcgy"]
-[ext_resource type="Texture2D" uid="uid://ylvj1scisrhh" path="res://assets/game buttons/drinkf.png" id="20_hvg6n"]
-[ext_resource type="Texture2D" uid="uid://bfc7coj03hiif" path="res://assets/game buttons/train.png" id="21_aserw"]
-[ext_resource type="Texture2D" uid="uid://d2cd15t6wo4aq" path="res://assets/game buttons/trainf.png" id="22_3pffe"]
-[ext_resource type="Texture2D" uid="uid://dvx4fqfwsmgxt" path="res://assets/game buttons/med.png" id="23_5q7ad"]
-[ext_resource type="Texture2D" uid="uid://73xfhdhavmk2" path="res://assets/game buttons/medf.png" id="24_kk25o"]
-[ext_resource type="Texture2D" uid="uid://dl55hgnk25qlv" path="res://assets/playeroneturn.png" id="25_hh8la"]
+[ext_resource type="Texture2D" uid="uid://cuyifv8kxu64w" path="res://assets/game/energy progress1.png" id="5_ik7fq"]
+[ext_resource type="Texture2D" uid="uid://wttgeplxyxli" path="res://assets/game/food.png" id="8_8bmr5"]
+[ext_resource type="Texture2D" uid="uid://dps4lku7uukl" path="res://assets/game/drink.png" id="9_20ai7"]
+[ext_resource type="Texture2D" uid="uid://bxwsdbih2ni25" path="res://assets/game/medicine.png" id="10_e1dud"]
+[ext_resource type="Texture2D" uid="uid://bg5jkowk12tbi" path="res://assets/game/under2.png" id="11_vmuky"]
+[ext_resource type="Texture2D" uid="uid://cm50snkdsme2b" path="res://assets/game/bar2.png" id="12_78wol"]
+[ext_resource type="Texture2D" uid="uid://bve1xep1fnl2t" path="res://assets/game/health progress2.png" id="13_ndbvv"]
+[ext_resource type="Texture2D" uid="uid://wseiphb2osn7" path="res://assets/game/energy progress2.png" id="14_ddjgb"]
+[ext_resource type="Texture2D" uid="uid://bfrpua6gge6u7" path="res://assets/game/game buttons/fight.png" id="16_v3xep"]
+[ext_resource type="Texture2D" uid="uid://dxnbtacnphyrx" path="res://assets/game/game buttons/fightf.png" id="17_pcevi"]
+[ext_resource type="Texture2D" uid="uid://buqi4xyag1ku1" path="res://assets/game/game buttons/action.png" id="18_fwg2p"]
+[ext_resource type="Texture2D" uid="uid://cbarkb8nhsjy2" path="res://assets/game/game buttons/actionf.png" id="19_ngq1v"]
+[ext_resource type="Texture2D" uid="uid://cxcs2srbd1m18" path="res://assets/game/game buttons/punch.png" id="20_nqq6i"]
+[ext_resource type="Texture2D" uid="uid://gprk66im4l3t" path="res://assets/game/game buttons/punchf.png" id="21_1nmb7"]
+[ext_resource type="Texture2D" uid="uid://ctmei2csueywd" path="res://assets/game/game buttons/kick.png" id="22_3xqfq"]
+[ext_resource type="Texture2D" uid="uid://ddunefgv3amqs" path="res://assets/game/game buttons/kickf.png" id="23_tc8eb"]
+[ext_resource type="Texture2D" uid="uid://cha8uysysdpkn" path="res://assets/game/game buttons/str.png" id="24_m2wvh"]
+[ext_resource type="Texture2D" uid="uid://c7m8vexsn358l" path="res://assets/game/game buttons/strf.png" id="25_8uvme"]
+[ext_resource type="Texture2D" uid="uid://cta451igbj7qu" path="res://assets/game/game buttons/spe.png" id="26_6sdb7"]
+[ext_resource type="Texture2D" uid="uid://d3n0yl530wbqx" path="res://assets/game/game buttons/spef.png" id="27_amfbr"]
+[ext_resource type="Texture2D" uid="uid://bjj6wgh45iuix" path="res://assets/game/game buttons/eat.png" id="28_8rr4n"]
+[ext_resource type="Texture2D" uid="uid://qhu1xbkxeobr" path="res://assets/game/game buttons/eatf.png" id="29_c56s0"]
+[ext_resource type="Texture2D" uid="uid://ct3gcgq2gcqy5" path="res://assets/game/game buttons/drink.png" id="30_377c7"]
+[ext_resource type="Texture2D" uid="uid://ph6anqmarm1l" path="res://assets/game/game buttons/drinkf.png" id="31_l6q88"]
+[ext_resource type="Texture2D" uid="uid://bdu66bqwi25c0" path="res://assets/game/game buttons/train.png" id="32_wno7o"]
+[ext_resource type="Texture2D" uid="uid://crd8msmpohxhy" path="res://assets/game/game buttons/trainf.png" id="33_l0yqo"]
+[ext_resource type="Texture2D" uid="uid://bjjd2l2do7865" path="res://assets/game/game buttons/med.png" id="34_edk68"]
+[ext_resource type="Texture2D" uid="uid://ce671woiuptuc" path="res://assets/game/game buttons/medf.png" id="35_anuaw"]
+[ext_resource type="Texture2D" uid="uid://dts2hmagq5s5w" path="res://assets/game/playeroneturn.png" id="36_dfmht"]
 
 [sub_resource type="Gradient" id="Gradient_u2ll6"]
 interpolation_mode = 1
@@ -68,9 +68,9 @@ offset_top = 39.0
 offset_right = 567.0
 offset_bottom = 89.0
 value = 100.0
-texture_under = ExtResource("2_ukknw")
-texture_over = ExtResource("3_lxfvb")
-texture_progress = ExtResource("4_47c3d")
+texture_under = ExtResource("2_0tpo6")
+texture_over = ExtResource("3_q8o6f")
+texture_progress = ExtResource("4_eqtwa")
 
 [node name="Energy" type="TextureProgressBar" parent="PlayerOneGui"]
 layout_mode = 0
@@ -79,9 +79,9 @@ offset_top = 100.45
 offset_right = 619.84
 offset_bottom = 150.45
 scale = Vector2(0.75, 0.65)
-texture_under = ExtResource("2_ukknw")
-texture_over = ExtResource("3_lxfvb")
-texture_progress = ExtResource("5_kh1lw")
+texture_under = ExtResource("2_0tpo6")
+texture_over = ExtResource("3_q8o6f")
+texture_progress = ExtResource("5_ik7fq")
 
 [node name="Icon" type="TextureRect" parent="PlayerOneGui"]
 layout_mode = 0
@@ -102,15 +102,15 @@ offset_bottom = 355.83
 
 [node name="TextureRect" type="TextureRect" parent="PlayerOneGui/Food"]
 layout_mode = 2
-texture = ExtResource("4_woojb")
+texture = ExtResource("8_8bmr5")
 
 [node name="TextureRect2" type="TextureRect" parent="PlayerOneGui/Food"]
 layout_mode = 2
-texture = ExtResource("4_woojb")
+texture = ExtResource("8_8bmr5")
 
 [node name="TextureRect3" type="TextureRect" parent="PlayerOneGui/Food"]
 layout_mode = 2
-texture = ExtResource("4_woojb")
+texture = ExtResource("8_8bmr5")
 
 [node name="Drinks" type="HBoxContainer" parent="PlayerOneGui"]
 layout_mode = 0
@@ -121,15 +121,15 @@ offset_bottom = 413.4
 
 [node name="TextureRect" type="TextureRect" parent="PlayerOneGui/Drinks"]
 layout_mode = 2
-texture = ExtResource("5_udloc")
+texture = ExtResource("9_20ai7")
 
 [node name="TextureRect2" type="TextureRect" parent="PlayerOneGui/Drinks"]
 layout_mode = 2
-texture = ExtResource("5_udloc")
+texture = ExtResource("9_20ai7")
 
 [node name="TextureRect3" type="TextureRect" parent="PlayerOneGui/Drinks"]
 layout_mode = 2
-texture = ExtResource("5_udloc")
+texture = ExtResource("9_20ai7")
 
 [node name="Meds" type="HBoxContainer" parent="PlayerOneGui"]
 layout_mode = 0
@@ -140,15 +140,15 @@ offset_bottom = 469.02
 
 [node name="TextureRect" type="TextureRect" parent="PlayerOneGui/Meds"]
 layout_mode = 2
-texture = ExtResource("6_qbxh5")
+texture = ExtResource("10_e1dud")
 
 [node name="TextureRect2" type="TextureRect" parent="PlayerOneGui/Meds"]
 layout_mode = 2
-texture = ExtResource("6_qbxh5")
+texture = ExtResource("10_e1dud")
 
 [node name="TextureRect3" type="TextureRect" parent="PlayerOneGui/Meds"]
 layout_mode = 2
-texture = ExtResource("6_qbxh5")
+texture = ExtResource("10_e1dud")
 
 [node name="Strength" type="HBoxContainer" parent="PlayerOneGui"]
 layout_mode = 0
@@ -172,9 +172,9 @@ offset_right = 1752.0
 offset_bottom = 89.0
 value = 100.0
 fill_mode = 1
-texture_under = ExtResource("10_hwk7m")
-texture_over = ExtResource("11_pwuck")
-texture_progress = ExtResource("12_fwtsy")
+texture_under = ExtResource("11_vmuky")
+texture_over = ExtResource("12_78wol")
+texture_progress = ExtResource("13_ndbvv")
 
 [node name="Energy" type="TextureProgressBar" parent="PlayerTwoGui"]
 layout_mode = 0
@@ -184,9 +184,9 @@ offset_right = 1798.32
 offset_bottom = 150.45
 scale = Vector2(0.75, 0.65)
 fill_mode = 1
-texture_under = ExtResource("10_hwk7m")
-texture_over = ExtResource("11_pwuck")
-texture_progress = ExtResource("14_366s4")
+texture_under = ExtResource("11_vmuky")
+texture_over = ExtResource("12_78wol")
+texture_progress = ExtResource("14_ddjgb")
 
 [node name="Icon" type="TextureRect" parent="PlayerTwoGui"]
 layout_mode = 0
@@ -208,15 +208,15 @@ alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="PlayerTwoGui/Food"]
 layout_mode = 2
-texture = ExtResource("4_woojb")
+texture = ExtResource("8_8bmr5")
 
 [node name="TextureRect2" type="TextureRect" parent="PlayerTwoGui/Food"]
 layout_mode = 2
-texture = ExtResource("4_woojb")
+texture = ExtResource("8_8bmr5")
 
 [node name="TextureRect3" type="TextureRect" parent="PlayerTwoGui/Food"]
 layout_mode = 2
-texture = ExtResource("4_woojb")
+texture = ExtResource("8_8bmr5")
 
 [node name="Drinks" type="HBoxContainer" parent="PlayerTwoGui"]
 layout_mode = 0
@@ -228,15 +228,15 @@ alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="PlayerTwoGui/Drinks"]
 layout_mode = 2
-texture = ExtResource("5_udloc")
+texture = ExtResource("9_20ai7")
 
 [node name="TextureRect2" type="TextureRect" parent="PlayerTwoGui/Drinks"]
 layout_mode = 2
-texture = ExtResource("5_udloc")
+texture = ExtResource("9_20ai7")
 
 [node name="TextureRect3" type="TextureRect" parent="PlayerTwoGui/Drinks"]
 layout_mode = 2
-texture = ExtResource("5_udloc")
+texture = ExtResource("9_20ai7")
 
 [node name="Meds" type="HBoxContainer" parent="PlayerTwoGui"]
 layout_mode = 0
@@ -248,22 +248,23 @@ alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="PlayerTwoGui/Meds"]
 layout_mode = 2
-texture = ExtResource("6_qbxh5")
+texture = ExtResource("10_e1dud")
 
 [node name="TextureRect2" type="TextureRect" parent="PlayerTwoGui/Meds"]
 layout_mode = 2
-texture = ExtResource("6_qbxh5")
+texture = ExtResource("10_e1dud")
 
 [node name="TextureRect3" type="TextureRect" parent="PlayerTwoGui/Meds"]
 layout_mode = 2
-texture = ExtResource("6_qbxh5")
+texture = ExtResource("10_e1dud")
 
 [node name="Strength" type="HBoxContainer" parent="PlayerTwoGui"]
 layout_mode = 0
-offset_left = 1832.48
-offset_top = 251.66
-offset_right = 1872.48
-offset_bottom = 291.66
+offset_left = 1874.0
+offset_top = 303.0
+offset_right = 1914.0
+offset_bottom = 343.0
+rotation = 3.14159
 alignment = 2
 
 [node name="Buttons" type="Control" parent="."]
@@ -282,13 +283,13 @@ offset_bottom = 1066.0
 
 [node name="Fight" type="TextureButton" parent="Buttons/Main"]
 layout_mode = 2
-texture_normal = ExtResource("5_l3l0w")
-texture_focused = ExtResource("6_lbfup")
+texture_normal = ExtResource("16_v3xep")
+texture_focused = ExtResource("17_pcevi")
 
 [node name="Action" type="TextureButton" parent="Buttons/Main"]
 layout_mode = 2
-texture_normal = ExtResource("6_54us3")
-texture_focused = ExtResource("8_u5ahn")
+texture_normal = ExtResource("18_fwg2p")
+texture_focused = ExtResource("19_ngq1v")
 
 [node name="Fight" type="GridContainer" parent="Buttons"]
 visible = false
@@ -301,23 +302,23 @@ columns = 2
 
 [node name="Punch" type="TextureButton" parent="Buttons/Fight"]
 layout_mode = 2
-texture_normal = ExtResource("9_wrks4")
-texture_focused = ExtResource("10_fowbn")
+texture_normal = ExtResource("20_nqq6i")
+texture_focused = ExtResource("21_1nmb7")
 
 [node name="Kick" type="TextureButton" parent="Buttons/Fight"]
 layout_mode = 2
-texture_normal = ExtResource("11_hts3o")
-texture_focused = ExtResource("12_2u8t6")
+texture_normal = ExtResource("22_3xqfq")
+texture_focused = ExtResource("23_tc8eb")
 
 [node name="Strong" type="TextureButton" parent="Buttons/Fight"]
 layout_mode = 2
-texture_normal = ExtResource("13_c8quq")
-texture_focused = ExtResource("14_p2rt7")
+texture_normal = ExtResource("24_m2wvh")
+texture_focused = ExtResource("25_8uvme")
 
 [node name="Special" type="TextureButton" parent="Buttons/Fight"]
 layout_mode = 2
-texture_normal = ExtResource("15_ku124")
-texture_focused = ExtResource("16_4qtfr")
+texture_normal = ExtResource("26_6sdb7")
+texture_focused = ExtResource("27_amfbr")
 
 [node name="Action" type="GridContainer" parent="Buttons"]
 visible = false
@@ -330,30 +331,30 @@ columns = 2
 
 [node name="Eat" type="TextureButton" parent="Buttons/Action"]
 layout_mode = 2
-texture_normal = ExtResource("17_vl0do")
-texture_focused = ExtResource("18_yrmkn")
+texture_normal = ExtResource("28_8rr4n")
+texture_focused = ExtResource("29_c56s0")
 
 [node name="Drink" type="TextureButton" parent="Buttons/Action"]
 layout_mode = 2
-texture_normal = ExtResource("19_evcgy")
-texture_focused = ExtResource("20_hvg6n")
+texture_normal = ExtResource("30_377c7")
+texture_focused = ExtResource("31_l6q88")
 
 [node name="Train" type="TextureButton" parent="Buttons/Action"]
 layout_mode = 2
-texture_normal = ExtResource("21_aserw")
-texture_focused = ExtResource("22_3pffe")
+texture_normal = ExtResource("32_wno7o")
+texture_focused = ExtResource("33_l0yqo")
 
 [node name="Medicine" type="TextureButton" parent="Buttons/Action"]
 layout_mode = 2
-texture_normal = ExtResource("23_5q7ad")
-texture_focused = ExtResource("24_kk25o")
+texture_normal = ExtResource("34_edk68")
+texture_focused = ExtResource("35_anuaw")
 
 [node name="TurnCounter" type="TextureRect" parent="."]
 offset_left = 17.0
 offset_top = 992.0
 offset_right = 649.0
 offset_bottom = 1062.0
-texture = ExtResource("25_hh8la")
+texture = ExtResource("36_dfmht")
 
 [connection signal="turnChange" from="." to="." method="_on_turn_change"]
 [connection signal="pressed" from="Buttons/Main/Fight" to="." method="_on_fight_pressed"]
