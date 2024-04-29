@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=3 uid="uid://ddgym3ukjusoy"]
 
 [ext_resource type="PackedScene" uid="uid://brl3cg6o07av0" path="res://game/dads/dad.tscn" id="1_ky0hn"]
-[ext_resource type="Texture2D" uid="uid://djj87se4ru3bq" path="res://assets/dads/fish dad/fish.png" id="2_kni4q"]
-[ext_resource type="Texture2D" uid="uid://bsuwdwl22i7sm" path="res://assets/dads/fish dad/single fish.png" id="3_4wl6s"]
+[ext_resource type="Texture2D" uid="uid://cobbcyyic2veu" path="res://assets/dads/fish dad/fish.png" id="2_kni4q"]
+[ext_resource type="Texture2D" uid="uid://bdsfm4a83ob8y" path="res://assets/dads/fish dad/single fish.png" id="3_4wl6s"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_15j5n"]
 load_path = "res://.godot/imported/sprites.png-62d5cc56d72f10200f7e910c40c2e626.ctex"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwsn83mvdpne"]
 
-[ext_resource type="AudioStream" uid="uid://ccj6pta0x4grb" path="res://assets/sound/music/oga_blaze.mp3" id="1_nnseo"]
+[ext_resource type="AudioStream" uid="uid://bf45s06oypk31" path="res://assets/sound/music/oga_blaze.mp3" id="1_nnseo"]
 [ext_resource type="Script" path="res://autoloads/MenuMusic.gd" id="2_qnkd7"]
 
 [node name="MenuMusic" type="AudioStreamPlayer"]

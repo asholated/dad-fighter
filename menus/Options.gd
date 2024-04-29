@@ -11,3 +11,7 @@ func _on_quit_pressed():
 
 func _on_v_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(value));
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel") and not event.is_echo():
+		hide();

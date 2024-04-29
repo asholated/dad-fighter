@@ -1,11 +1,11 @@
 [gd_scene load_steps=21 format=3 uid="uid://brl3cg6o07av0"]
 
-[ext_resource type="Texture2D" uid="uid://dshf0iamnmch1" path="res://assets/dads/asian dad/template.png" id="1_6jcti"]
+[ext_resource type="Texture2D" uid="uid://da8jqov8h8acb" path="res://assets/dads/asian dad/template.png" id="1_6jcti"]
 [ext_resource type="Script" path="res://game/dads/dad.gd" id="2_svarj"]
-[ext_resource type="AudioStream" uid="uid://cw6vxhctmikub" path="res://assets/sound/hit.mp3" id="3_3bdos"]
-[ext_resource type="AudioStream" uid="uid://cts2nvytewd6g" path="res://assets/sound/train.mp3" id="4_lgpe1"]
-[ext_resource type="AudioStream" uid="uid://ch78ha6hhyeq" path="res://assets/sound/eat.mp3" id="4_qdg8s"]
-[ext_resource type="AudioStream" uid="uid://cow3c4c1jji1u" path="res://assets/sound/drink.mp3" id="5_o2d32"]
+[ext_resource type="AudioStream" uid="uid://b5xmi5bdv21rw" path="res://assets/sound/hit.mp3" id="3_3bdos"]
+[ext_resource type="AudioStream" uid="uid://kw875ceelkjy" path="res://assets/sound/train.mp3" id="4_lgpe1"]
+[ext_resource type="AudioStream" uid="uid://b5sahxmpwmhls" path="res://assets/sound/eat.mp3" id="4_qdg8s"]
+[ext_resource type="AudioStream" uid="uid://bc5ti32n30380" path="res://assets/sound/drink.mp3" id="5_o2d32"]
 
 [sub_resource type="Animation" id="Animation_gxk3x"]
 length = 0.001
